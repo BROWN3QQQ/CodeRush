@@ -20,7 +20,7 @@ public class GenerateParentheses {
         List<String> list =new ArrayList<>();
 
         while (N  != 0){
-            
+
         }
 
 
