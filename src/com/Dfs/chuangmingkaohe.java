@@ -15,7 +15,7 @@ public class chuangmingkaohe {
     static  int n;
     static int[] num = {0,1,2,3,4,5,6,7,8,9};
     static int[] status = {0,0,0,0,0,0,0,0,0,0,0};
-    static   List<Integer> list = new ArrayList<>();
+    static   List<int[]> list = new ArrayList<>();
     static  int[] temp = null;
     static int tempnum = 0;
 
@@ -32,11 +32,10 @@ public class chuangmingkaohe {
             return;
         }
         layer = layer + 1;
-        for(int q = 1;q <= 9;q++){
+        for(int q = temp[layer-1] + 1;q <= 9;q++){
             if (status[q] == 0){
                 status[q] = 1;
                 temp[layer] = num[q];
-
                 dfs(layer);
                 status[q] = 0;
             }
